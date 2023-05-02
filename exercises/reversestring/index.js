@@ -7,16 +7,33 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
+	//solution 1: (original)
 	//start at the end of the string
 	//add each item in the string into a new reversed string
-	reverse_string = '';
+	reversed_string = '';
 	for (let i = str.length - 1; i >= 0; i--) {
-		reverse_string += str[i];
-		//console.log(str[i]);
+		reversed_string += str[i];
 	}
-	return reverse_string;
+	return reversed_string;
 }
 
 reverse('hello');
 
 module.exports = reverse;
+
+//solution 2
+// array.reverse solution:
+// return str.split('').reverse().join('');
+
+//solution 3
+// for of loop:
+// let reversed = '';
+// for (let character of str) {
+// 	reversed = character + reversed;
+// 	console.log(reversed);
+// }
+// return reversed;
+
+//solution 4 (the wow solution)
+// array helper with reduce function:
+//return str.split('').reduce((rev, char) => char + rev, '');
