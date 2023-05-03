@@ -7,6 +7,25 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+	//solution 1: my solution
+	//for of loop, add each character into reverse_str
+	//if reverse_str === str -> return true
+	//return false
+	reverse_string = '';
+
+	for (character of str) {
+		reverse_string = character + reverse_string;
+	}
+	console.log(reverse_string);
+	if (reverse_string === str) {
+		return true;
+	}
+	return false;
+}
+
+palindrome('abba');
+palindrome('1000001');
+palindrome('bamboclaat');
 
 module.exports = palindrome;
