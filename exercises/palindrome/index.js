@@ -12,8 +12,8 @@ function palindrome(str) {
 	//for of loop, add each character into reverse_str
 	//if reverse_str === str -> return true
 	//return false
-	reverse_string = '';
 
+	reverse_string = '';
 	for (character of str) {
 		reverse_string = character + reverse_string;
 	}
@@ -29,3 +29,15 @@ palindrome('1000001');
 palindrome('bamboclaat');
 
 module.exports = palindrome;
+
+//Solution 2: most straight forward using js built in funcs
+// const reverse_str = str.split('').reverse().join('');
+// return str === reverse_str;
+
+//Solution 3: array helper solution .every() --> NOT IDEAL
+//if 1st element == last element, move forward
+//	if 2nd element == 2nd last element, move forward
+//		compare middle to itself
+// return str.split('').every((char, i) => {
+// 	return char === str[str.length - i - 1];
+// });
