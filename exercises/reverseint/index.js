@@ -8,6 +8,31 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+function reverseInt(n) {
+	str_int = n.toString();
+	reversed_str = '';
+	//handle negative integers
+	if (Math.sign(parseInt(str_int)) == -1) {
+		reversed_str = '-';
+	}
+	//handle 0
+	if (parseInt(str_int) == 0) {
+		reversed_str = '0';
+	}
+	for (let i = str_int.length - 1; i >= 0; i--) {
+		//if contains 0
+		if (str_int[i] === '0' || str_int[i] === '-') {
+			str_int[i] = '';
+			reversed_str += '';
+		} else {
+			reversed_str += str_int[i];
+		}
+		console.log(reversed_str);
+	}
+	return parseInt(reversed_str);
+}
+
+reverseInt(-12);
+reverseInt(500);
 
 module.exports = reverseInt;
