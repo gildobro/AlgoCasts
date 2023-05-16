@@ -9,6 +9,7 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
+	//Solution 1: my solution
 	str_int = n.toString();
 	reversed_str = '';
 	//handle negative integers
@@ -36,3 +37,9 @@ reverseInt(-12);
 reverseInt(500);
 
 module.exports = reverseInt;
+
+// //solution 2: simplistic and short
+
+// const reversed = n.toString().split('').reverse().join('');
+
+// return parseInt(reversed) * Math.sign(n);
