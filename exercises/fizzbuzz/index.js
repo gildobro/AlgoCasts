@@ -14,13 +14,16 @@
 
 function fizzBuzz(n) {
 	for (let i = 1; i <= n; i++) {
-		//first check both
-		if (i % 3 == 0 && i % 5 == 0) {
+		//first check both (or if i % 15 === 0) <-- looks cleaner
+		if (i % 3 === 0 && i % 5 === 0) {
 			console.log('fizzbuzz');
-		} else if (i % 3 == 0) {
+			//then check just 3
+		} else if (i % 3 === 0) {
 			console.log('fizz');
-		} else if (i % 5 == 0) {
+			//then check just 5
+		} else if (i % 5 === 0) {
 			console.log('buzz');
+			//if none of the above, print the number
 		} else {
 			console.log(i);
 		}
