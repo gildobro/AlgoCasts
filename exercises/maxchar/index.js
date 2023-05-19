@@ -5,6 +5,29 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-function maxChar(str) {}
+function maxChar(str) {
+	//create an empty object and max
+	const chars = {};
+	let max = 0;
+
+	//loop through string, count occurences of each string and add them into chars object
+	for (let char of str) {
+		!chars[char] ? (chars[char] = 1) : chars[char]++;
+	}
+
+	//loop through char object to find the largest char
+	for (let key in chars) {
+		//if property is largest, max == key
+		if (chars[key] > max) {
+			max = chars[key];
+		}
+		//if key[value] == max, return key
+		if (chars[key] == max) {
+			return key;
+		}
+	}
+}
+
+maxChar('Hello There!');
 
 module.exports = maxChar;
