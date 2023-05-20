@@ -14,16 +14,16 @@
 
 function fizzBuzz(n) {
 	for (let i = 1; i <= n; i++) {
-		//first check both (or if i % 15 === 0) <-- looks cleaner
+		//check both multiples
 		if (i % 3 === 0 && i % 5 === 0) {
 			console.log('fizzbuzz');
-			//then check just 3
+			//check for multiple of only 3
 		} else if (i % 3 === 0) {
 			console.log('fizz');
-			//then check just 5
+			//check for multiple of only 5
 		} else if (i % 5 === 0) {
 			console.log('buzz');
-			//if none of the above, print the number
+			//if all fail, print i
 		} else {
 			console.log(i);
 		}
