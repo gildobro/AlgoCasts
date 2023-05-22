@@ -9,10 +9,7 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-	let newstrA = cleanString(stringA);
-	let newstrB = cleanString(stringB);
-
-	if (newstrA == newstrB) {
+	if (cleanString(stringA) == cleanString(stringB)) {
 		return true;
 	}
 }
